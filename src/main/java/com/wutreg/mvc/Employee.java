@@ -1,12 +1,23 @@
 package com.wutreg.mvc;
 
+import java.util.HashMap;
+import java.util.LinkedHashMap;
+import java.util.Map;
+
 public class Employee {
     private String name;
     private String surname;
     private int salary;
     private String department;
+    private Map<String, String> departments;
 
     public Employee() {
+        departments = new LinkedHashMap<>();
+        // value, label
+        departments.put("Information Technology", "IT");
+        departments.put("Кадровички", "HR");
+        departments.put("Sales", "Продажи");
+        departments.put("Бухгалтерия", "Бух");
     }
 
     public String getName() {
@@ -39,6 +50,14 @@ public class Employee {
 
     public void setDepartment(String department) {
         this.department = department;
+    }
+
+    public Map<String, String> getDepartments() {
+        return departments;
+    }
+
+    public void setDepartments(Map<String, String> departments) {
+        this.departments = departments;
     }
 
     @Override
