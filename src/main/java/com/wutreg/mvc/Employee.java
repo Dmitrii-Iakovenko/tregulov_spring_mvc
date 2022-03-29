@@ -12,6 +12,8 @@ public class Employee {
     private Map<String, String> departments;
     private String carBrand;
     private Map<String, String> carBrands;
+    private String[] languages;
+    private Map<String, String> languageList;
 
     public Employee() {
         departments = new LinkedHashMap<>();
@@ -25,6 +27,12 @@ public class Employee {
         carBrands.put("BMV", "Беха");
         carBrands.put("Audi", "Audi");
         carBrands.put("Мерин", "Мерин");
+
+        languageList = new LinkedHashMap<>();
+        languageList.put("English", "En");
+        languageList.put("German", "De");
+        languageList.put("Французский", "ФР");
+
     }
 
     public String getName() {
@@ -81,6 +89,22 @@ public class Employee {
 
     public void setCarBrands(Map<String, String> carBrands) {
         this.carBrands = carBrands;
+    }
+
+    public String[] getLanguages() {
+        return languages;
+    }
+
+    public void setLanguages(String[] languages) {
+        this.languages = languages;
+    }
+
+    public Map<String, String> getLanguageList() {
+        return languageList;
+    }
+
+    public void setLanguageList(Map<String, String> languageList) {
+        this.languageList = languageList;
     }
 
     @Override
