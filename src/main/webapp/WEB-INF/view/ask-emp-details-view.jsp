@@ -20,13 +20,15 @@
     <br>
     Department: <form:select path="department">
     <form:options items="${employee.departments}"/>
-<%--        <form:option value="Information Technology" label="IT"/>--%>
-<%--        <form:option value="Human Resources" label="HR"/>--%>
-<%--        <form:option value="Sales" label="Продажи"/>--%>
-<%--        <form:option value="Бухгалтерия" label="Бух>"/>--%>
     </form:select>
     <br>
     <br>
+    Which car do you want?
+    <form:radiobuttons path="carBrand" items="${employee.carBrands}"/>
+<%--    BMW <form:radiobutton path="carBrand" value="BMW"/>--%>
+<%--    Audi <form:radiobutton path="carBrand" value="Audi"/>--%>
+<%--    MB <form:radiobutton path="carBrand" value="Mercedes-Benz"/>--%>
+    <br><br>
     <input type="submit" value="Ok">
 </form:form>
 
