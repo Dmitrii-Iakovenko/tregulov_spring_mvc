@@ -1,5 +1,7 @@
 package com.wutreg.mvc;
 
+import com.wutreg.mvc.validation.CheckEmail;
+
 import javax.validation.constraints.*;
 import java.util.LinkedHashMap;
 import java.util.Map;
@@ -20,6 +22,8 @@ public class Employee {
     private Map<String, String> languageList;
     @Pattern(regexp = "\\d{3}-\\d{2}-\\d{2}", message = "неправильный формат номера (xxx-xx-xx)")
     private String phoneNumber;
+    @CheckEmail(value = "abc.com", message = "почта должна оканчиваться на abc.com")
+    private String email;
 
     public Employee() {
         departments = new LinkedHashMap<>();
@@ -121,6 +125,13 @@ public class Employee {
         this.phoneNumber = phoneNumber;
     }
 
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
+    }
 
     @Override
     public String toString() {

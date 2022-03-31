@@ -25,6 +25,7 @@ public class MyController {
         employee.setName("Иван");
         employee.setSurname("Petrov");
         employee.setSalary(4000);
+        employee.setPhoneNumber("123-45-67");
         model.addAttribute("employee", employee);
         return "ask-emp-details-view";
     }
