@@ -1,9 +1,6 @@
 package com.wutreg.mvc;
 
-import javax.validation.constraints.NotBlank;
-import javax.validation.constraints.NotEmpty;
-import javax.validation.constraints.NotNull;
-import javax.validation.constraints.Size;
+import javax.validation.constraints.*;
 import java.util.LinkedHashMap;
 import java.util.Map;
 
@@ -12,6 +9,8 @@ public class Employee {
     private String name;
     @NotBlank(message = "Фамилия не должна быть пустой")
     private String surname;
+    @Min(value = 500, message = "не менее 500")
+    @Max(value = 5000, message = "не более 5000")
     private int salary;
     private String department;
     private Map<String, String> departments;
@@ -19,6 +18,8 @@ public class Employee {
     private Map<String, String> carBrands;
     private String[] languages;
     private Map<String, String> languageList;
+    @Pattern(regexp = "\\d{3}-\\d{2}-\\d{2}", message = "неправильный формат номера (xxx-xx-xx)")
+    private String phoneNumber;
 
     public Employee() {
         departments = new LinkedHashMap<>();
@@ -111,6 +112,15 @@ public class Employee {
     public void setLanguageList(Map<String, String> languageList) {
         this.languageList = languageList;
     }
+
+    public String getPhoneNumber() {
+        return phoneNumber;
+    }
+
+    public void setPhoneNumber(String phoneNumber) {
+        this.phoneNumber = phoneNumber;
+    }
+
 
     @Override
     public String toString() {
