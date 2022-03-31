@@ -1,11 +1,16 @@
 package com.wutreg.mvc;
 
-import java.util.HashMap;
+import javax.validation.constraints.NotBlank;
+import javax.validation.constraints.NotEmpty;
+import javax.validation.constraints.NotNull;
+import javax.validation.constraints.Size;
 import java.util.LinkedHashMap;
 import java.util.Map;
 
 public class Employee {
+    @Size(min=2, message = "name must be minimum 2 symbols")
     private String name;
+    @NotBlank(message = "Фамилия не должна быть пустой")
     private String surname;
     private int salary;
     private String department;
