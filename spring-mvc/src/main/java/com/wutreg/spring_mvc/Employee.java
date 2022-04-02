@@ -1,6 +1,6 @@
-package com.wutreg.mvc;
+package com.wutreg.spring_mvc;
 
-import com.wutreg.mvc.validation.CheckEmail;
+import com.wutreg.spring_mvc.validation.CheckEmail;
 
 import javax.validation.constraints.*;
 import java.util.LinkedHashMap;

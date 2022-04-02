@@ -1,4 +1,4 @@
-package com.wutreg.mvc.validation;
+package com.wutreg.spring_mvc.validation;
 
 import javax.validation.ConstraintValidator;
 import javax.validation.ConstraintValidatorContext;
