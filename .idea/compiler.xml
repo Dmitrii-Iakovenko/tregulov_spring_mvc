@@ -9,10 +9,13 @@
         <module name="spring-mvc" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="mvc_hibernate_aop" target="17" />
+    </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
-      <module name="mvc-hibernate-aop" options="" />
+      <module name="mvc-hibernate-aop" options="--add-modules java.base" />
     </option>
   </component>
 </project>
