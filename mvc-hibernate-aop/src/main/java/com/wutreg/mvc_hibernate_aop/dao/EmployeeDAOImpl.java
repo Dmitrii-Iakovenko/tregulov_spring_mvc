@@ -18,6 +18,7 @@ public class EmployeeDAOImpl implements EmployeeDAO {
         return sessionFactory
                 .getCurrentSession()
                 .createQuery("from Employee", Employee.class)
+//                .createQuery("select Employee from Employee", Employee.class)
                 .getResultList();
     }
 
@@ -33,6 +34,15 @@ public class EmployeeDAOImpl implements EmployeeDAO {
         return sessionFactory
                 .getCurrentSession()
                 .get(Employee.class, id);
+    }
+
+    @Override
+    public void deleteById(long id) {
+        sessionFactory
+                .getCurrentSession()
+                .createQuery("delete from Employee where id = :employeeId")
+                .setParameter("employeeId", id)
+                .executeUpdate();
     }
 
 
