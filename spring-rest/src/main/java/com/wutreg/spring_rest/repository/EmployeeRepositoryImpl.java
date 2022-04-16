@@ -22,7 +22,6 @@ public class EmployeeRepositoryImpl implements EmployeeRepository {
         return sessionFactory
                 .getCurrentSession()
                 .createQuery("from Employee", Employee.class)
-//                .createQuery("select Employee from Employee", Employee.class)
                 .getResultList();
     }
 
