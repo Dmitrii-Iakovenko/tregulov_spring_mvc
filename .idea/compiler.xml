@@ -16,7 +16,8 @@
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
       <module name="mvc-hibernate-aop" options="" />
-      <module name="spring-rest" options="" />
+      <module name="rest-client" options="--add-modules java.base" />
+      <module name="spring-rest" options="--add-modules java.sql,java.desktop,java.base" />
     </option>
   </component>
 </project>

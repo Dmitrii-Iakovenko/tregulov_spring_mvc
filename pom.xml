@@ -12,6 +12,7 @@
         <module>spring-mvc</module>
         <module>mvc-hibernate-aop</module>
         <module>spring-rest</module>
+        <module>rest_client</module>
     </modules>
 
     <properties>
