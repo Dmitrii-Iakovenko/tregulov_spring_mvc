@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @RestController
-@RequestMapping("api/v1")
+@RequestMapping("api/v1/employees")
 public class EmployeeRestController {
 
     private final EmployeeService employeeService;
@@ -19,12 +19,12 @@ public class EmployeeRestController {
         this.employeeService = employeeService;
     }
 
-    @GetMapping("employees")
+    @GetMapping
     public List<Employee> getAll() {
         return employeeService.getAllEmployees();
     }
 
-    @GetMapping("employees/{id}")
+    @GetMapping("{id}")
     public Employee getById(@PathVariable long id) {
         Employee employee = employeeService.getEmployee(id);
         if (employee == null) {
@@ -34,19 +34,19 @@ public class EmployeeRestController {
         return employee;
     }
 
-    @PostMapping("employees")
+    @PostMapping
     public Employee add(@RequestBody Employee employee) {
         employeeService.saveEmployee(employee);
         return employee;
     }
 
-    @PutMapping("employees")
+    @PutMapping
     public Employee update(@RequestBody Employee employee) {
         employeeService.saveEmployee(employee);
         return employee;
     }
 
-    @DeleteMapping("employees/{id}")
+    @DeleteMapping("{id}")
     public String delete(@PathVariable long id) {
         Employee employee = employeeService.getEmployee(id);
         if (employee == null) {
