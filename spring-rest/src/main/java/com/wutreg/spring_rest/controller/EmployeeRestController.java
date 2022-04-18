@@ -45,4 +45,16 @@ public class EmployeeRestController {
         employeeService.saveEmployee(employee);
         return employee;
     }
+
+    @DeleteMapping("employees/{id}")
+    public String delete(@PathVariable long id) {
+        Employee employee = employeeService.getEmployee(id);
+        if (employee == null) {
+            String errorMessage = "There is no employee with Id = " + id + " in Database";
+            throw new EmployeeNotFoundException(errorMessage);
+        }
+
+        employeeService.deleteById(id);
+        return "Employee with ID = " + id + " was deleted.";
+    }
 }
