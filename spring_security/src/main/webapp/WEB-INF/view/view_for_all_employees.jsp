@@ -1,9 +1,11 @@
 <%@ taglib prefix="security" uri="http://www.springframework.org/security/tags" %>
+<%@ page contentType="text/html;charset=UTF-8" language="java" %>
+
 <!DOCTYPE html>
 <html>
 <body>
 
-<h3>Information for all employees</h3>
+<h3>Информация для всех работников</h3>
 <br><br>
 
 <security:authorize access="hasRole('HR')">
