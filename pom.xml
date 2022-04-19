@@ -13,6 +13,7 @@
         <module>mvc-hibernate-aop</module>
         <module>spring-rest</module>
         <module>rest_client</module>
+      <module>spring_security</module>
     </modules>
 
     <properties>
