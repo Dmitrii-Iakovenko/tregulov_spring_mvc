@@ -27,5 +27,7 @@ VALUES ('Заур', 'ROLE_EMPLOYEE'),
        ('Иван', 'ROLE_HR'),
        ('Иван', 'ROLE_MANAGER');
 
-    
-    
+
+-- update users
+-- set password = '{bcrypt}$2a$12$oITtotz6Y0YYhG2QPRAVgeUNofNprgi1cJSQ8UlZ9sBSvcvdNCgG.'
+-- where username = 'Иван';
