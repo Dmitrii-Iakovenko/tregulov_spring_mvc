@@ -6,3 +6,4 @@
 /rest_client/target/
 /spring_security/target/
 /spring_boot/.mvn/
+/spring_boot/target/
