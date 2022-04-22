@@ -8,7 +8,7 @@ public interface EmployeeService {
 
     List<Employee> getAll();
 
-    void saveEmployee(Employee employee);
+    Employee saveEmployee(Employee employee);
 
     Employee getEmployee(long id);
 

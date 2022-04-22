@@ -30,14 +30,12 @@ public class EmployeeRestController {
 
     @PostMapping
     public Employee add(@RequestBody Employee employee) {
-        employeeService.saveEmployee(employee);
-        return employee;
+        return employeeService.saveEmployee(employee);
     }
 
     @PutMapping
     public Employee update(@RequestBody Employee employee) {
-        employeeService.saveEmployee(employee);
-        return employee;
+        return employeeService.saveEmployee(employee);
     }
 
     @DeleteMapping("{id}")
