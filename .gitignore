@@ -7,3 +7,5 @@
 /spring_security/target/
 /spring_boot/.mvn/
 /spring_boot/target/
+/spring_data_jpa/target/
+/spring_data_jpa/.mvn/
