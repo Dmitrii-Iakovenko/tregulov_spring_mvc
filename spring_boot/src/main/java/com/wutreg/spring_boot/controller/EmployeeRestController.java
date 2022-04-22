@@ -23,39 +23,26 @@ public class EmployeeRestController {
         return employeeService.getAll();
     }
 
-//    @GetMapping("{id}")
-//    public Employee getById(@PathVariable long id) {
-//        Employee employee = employeeService.getEmployee(id);
-//        if (employee == null) {
-//            String errorMessage = "There is no employee with Id = " + id + " in Database";
-//            throw new EmployeeNotFoundException(errorMessage);
-//        }
-//        return employee;
-//    }
-//
-//    @PostMapping
-//    public Employee add(@RequestBody Employee employee) {
-//        employeeService.saveEmployee(employee);
-//        return employee;
-//    }
-//
-//    @PutMapping
-//    public Employee update(@RequestBody Employee employee) {
-//        employeeService.saveEmployee(employee);
-//        return employee;
-//    }
-//
-//    @DeleteMapping("{id}")
-//    public String delete(@PathVariable long id) {
-//        Employee employee = getById(id);
-//
-////        Employee employee = employeeService.getEmployee(id);
-////        if (employee == null) {
-////            String errorMessage = "There is no employee with Id = " + id + " in Database";
-////            throw new EmployeeNotFoundException(errorMessage);
-////        }
-//
-//        employeeService.deleteById(id);
-//        return "Employee with ID = " + id + " was deleted.";
-//    }
+    @GetMapping("{id}")
+    public Employee getById(@PathVariable long id) {
+        return employeeService.getEmployee(id);
+    }
+
+    @PostMapping
+    public Employee add(@RequestBody Employee employee) {
+        employeeService.saveEmployee(employee);
+        return employee;
+    }
+
+    @PutMapping
+    public Employee update(@RequestBody Employee employee) {
+        employeeService.saveEmployee(employee);
+        return employee;
+    }
+
+    @DeleteMapping("{id}")
+    public String delete(@PathVariable long id) {
+        employeeService.deleteById(id);
+        return "Employee with ID = " + id + " was deleted.";
+    }
 }

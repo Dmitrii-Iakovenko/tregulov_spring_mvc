@@ -24,21 +24,21 @@ public class EmployeeServiceImpl implements EmployeeService {
         return employeeRepository.getAll();
     }
 
-//    @Override
-//    @Transactional
-//    public void saveEmployee(Employee employee) {
-//        employeeRepository.saveEmployee(employee);
-//    }
-//
-//    @Override
-//    @Transactional
-//    public Employee getEmployee(long id) {
-//        return employeeRepository.getEmployee(id);
-//    }
-//
-//    @Override
-//    @Transactional
-//    public void deleteById(long id) {
-//        employeeRepository.deleteById(id);
-//    }
+    @Override
+    @Transactional
+    public void saveEmployee(Employee employee) {
+        employeeRepository.saveEmployee(employee);
+    }
+
+    @Override
+    @Transactional
+    public Employee getEmployee(long id) {
+        return employeeRepository.getEmployee(id);
+    }
+
+    @Override
+    @Transactional
+    public void deleteById(long id) {
+        employeeRepository.deleteById(id);
+    }
 }

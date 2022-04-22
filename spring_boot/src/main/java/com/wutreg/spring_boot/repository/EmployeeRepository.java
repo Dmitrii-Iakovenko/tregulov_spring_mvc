@@ -9,9 +9,9 @@ public interface EmployeeRepository {
 
     List<Employee> getAll();
 
-//    void saveEmployee(Employee employee);
-//
-//    Employee getEmployee(long id);
-//
-//    void deleteById(long id);
+    void saveEmployee(Employee employee);
+
+    Employee getEmployee(long id);
+
+    void deleteById(long id);
 }

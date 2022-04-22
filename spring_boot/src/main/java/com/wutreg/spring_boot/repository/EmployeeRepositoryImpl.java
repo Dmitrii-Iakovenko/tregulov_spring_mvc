@@ -24,35 +24,28 @@ public class EmployeeRepositoryImpl implements EmployeeRepository {
             .unwrap(Session.class)
             .createQuery("from Employee", Employee.class)
             .getResultList();
-
-//        return sessionFactory
-//                .getCurrentSession()
-//                .createQuery("from Employee", Employee.class)
-//                .getResultList();
     }
 
-//    @Override
-//    public void saveEmployee(Employee employee) {
-//        sessionFactory
-//                .getCurrentSession()
-//                .saveOrUpdate(employee);
-//    }
-//
-//    @Override
-//    public Employee getEmployee(long id) {
-//        return sessionFactory
-//                .getCurrentSession()
-//                .get(Employee.class, id);
-//    }
-//
-//    @Override
-//    public void deleteById(long id) {
-//        sessionFactory
-//                .getCurrentSession()
-//                .createQuery("delete from Employee where id = :employeeId")
-//                .setParameter("employeeId", id)
-//                .executeUpdate();
-//    }
+    @Override
+    public void saveEmployee(Employee employee) {
+        entityManager
+            .unwrap(Session.class)
+            .saveOrUpdate(employee);
+    }
 
+    @Override
+    public Employee getEmployee(long id) {
+        return entityManager
+            .unwrap(Session.class)
+            .get(Employee.class, id);
+    }
 
+    @Override
+    public void deleteById(long id) {
+        entityManager
+            .unwrap(Session.class)
+            .createQuery("delete from Employee where id = :employeeId")
+            .setParameter("employeeId", id)
+            .executeUpdate();
+    }
 }
