@@ -1,0 +1,37 @@
+﻿
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5432/tregulov
+    username: postgres
+    password: postgres
+
+  data:
+    rest:
+      base-path: api/v1
+
+  security:
+    user:
+      name: Дмитрий
+      password: 123456
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'
+
+  info:
+    env:
+      enabled: true
+
+
+
+info:
+  name: Spring Data Rest
+  description: 'Srping Boot Rest Application. \
+  This app is used for CRUD operations with employees of our company'
+  author: Дмитрий Яковенко
+
+
+#server.port=80
+

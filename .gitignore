@@ -9,3 +9,5 @@
 /spring_boot/target/
 /spring_data_jpa/target/
 /spring_data_jpa/.mvn/
+/spring_data_rest/target/
+/.idea/

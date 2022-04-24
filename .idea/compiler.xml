@@ -20,7 +20,8 @@
       <module name="spring-rest" options="" />
       <module name="spring_boot" options="-parameters" />
       <module name="spring_data_jpa" options="-parameters" />
-      <module name="spring_data_rest" options="-parameters" />
+      <module name="spring_data_rest" options="-parameters --add-modules java.base" />
+      <module name="spring_security" options="--add-modules java.sql,java.base,java.desktop" />
     </option>
   </component>
 </project>
