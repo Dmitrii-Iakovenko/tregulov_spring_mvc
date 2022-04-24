@@ -16,10 +16,11 @@
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
       <module name="mvc-hibernate-aop" options="" />
-      <module name="rest-client" options="--add-modules java.base" />
+      <module name="rest-client" options="" />
       <module name="spring-rest" options="" />
       <module name="spring_boot" options="-parameters" />
       <module name="spring_data_jpa" options="-parameters" />
+      <module name="spring_data_rest" options="-parameters" />
     </option>
   </component>
 </project>

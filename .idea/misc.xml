@@ -13,6 +13,7 @@
         <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/spring_boot/pom.xml" />
         <option value="$PROJECT_DIR$/spring_data_jpa/pom.xml" />
+        <option value="$PROJECT_DIR$/spring_data_rest/pom.xml" />
       </list>
     </option>
     <option name="ignoredFiles">
